@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+# ディレクトリ内のファイルをすべてindex番号にrenameしたい
+
+targetPath="images/"
+i=0
+
+cd $targetPath
+for file in *
+do
+  mv $file "$i.jpg"
+  let i++
+done
+
+echo "result: $i"
